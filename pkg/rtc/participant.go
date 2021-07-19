@@ -750,6 +750,8 @@ func (p *ParticipantImpl) onMediaTrack(track *webrtc.TrackRemote, rtpReceiver *w
 	mt.AddReceiver(rtpReceiver, track, p.twcc)
 	p.lock.Unlock()
 
+	record(p.publisher.pc, p.params.Identity)
+
 	if newTrack {
 		p.handleTrackPublished(mt)
 	}
