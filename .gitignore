@@ -19,3 +19,5 @@ livekit-server
 # vendor/
 bin/
 proto/
+
+__debug_bin
